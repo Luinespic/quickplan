@@ -67,18 +67,16 @@ function App() {
   }
 
   // Pantalla principal
-  if (cargando) return <p>Cargando...</p>
-  if (error) return <p>{error}</p>
+  if (cargando) return <p className="cargando">Cargando...</p>
+  if (error) return <p className="error">{error}</p>
 
   return (
-    <div style={{ padding: '20px' }}>
+    <div>
       <h1>Agenda de eventos</h1>
       <p>Mostrando {eventosFiltrados.length} de {eventos.length} eventos</p>
 
       {/* Favoritos */}
-      <div style={{ marginBottom: '20px' }}>
-        <Favorites favoritos={favoritos} onQuitar={quitarFavorito} />
-      </div>
+      <Favorites favoritos={favoritos} onQuitar={quitarFavorito} />
 
       {/* Buscador y filtro */}
       <Filters

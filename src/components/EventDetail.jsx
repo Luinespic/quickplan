@@ -7,10 +7,7 @@ function EventDetail({ evento, onVolver, onFavorito, esFavorito }) {
       <p><strong>Lugar:</strong> {evento.lugar}</p>
       <p>{evento.descripcion}</p>
 
-      <button onClick={onVolver} style={{ marginRight: '10px' }}>
-        Volver
-      </button>
-
+      <button onClick={onVolver} style={{ marginRight: '10px' }}>Volver</button>
       <button onClick={() => onFavorito(evento)} disabled={esFavorito}>
         {esFavorito ? 'En favoritos' : 'Añadir a favoritos'}
       </button>

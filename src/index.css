@@ -1,18 +1,128 @@
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f9f9f9;
+/* RESET BÁSICO */
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
-h1,
-h2,
-h3 {
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f5f5;
   color: #333;
+  line-height: 1.5;
+  padding: 20px;
 }
 
+/* TÍTULOS */
+h1 {
+  font-size: 2rem;
+  color: #1a73e8;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.5rem;
+  color: #1a73e8;
+  margin-bottom: 15px;
+}
+
+h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+/* BOTONES */
 button {
-  padding: 5px 10px;
-  margin-top: 5px;
+  background-color: #1a73e8;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 6px 12px;
   cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+}
+
+button:hover:not(:disabled) {
+  background-color: #155ab6;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: default;
+}
+
+/* INPUTS Y SELECTS */
+input[type="text"], select {
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  margin-right: 10px;
+  width: 220px;
+}
+
+input[type="text"]:focus, select:focus {
+  outline: none;
+  border-color: #1a73e8;
+  box-shadow: 0 0 5px rgba(26, 115, 232, 0.5);
+}
+
+/* TARJETAS DE EVENTOS */
+.event-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.event-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.event-card p {
+  margin: 5px 0;
+}
+
+/* FAVORITOS */
+.favorites {
+  background-color: #e8f0fe;
+  border: 1px solid #c6dafc;
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.favorites ul {
+  list-style: none;
+}
+
+.favorites li {
+  margin-bottom: 8px;
+}
+
+/* CONTENEDOR GENERAL */
+div {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* CARGA Y ERROR */
+p.cargando {
+  font-style: italic;
+  color: #777;
+  text-align: center;
+  margin-top: 50px;
+}
+
+p.error {
+  color: #d93025;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 50px;
 }
